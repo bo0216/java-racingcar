@@ -2,14 +2,12 @@ package calculator;
 
 import java.util.Objects;
 
-import static calculator.Operator.*;
-
 public class StringCalculator {
     Double number1;
     Double number2;
 
     public double calculate(String input) {
-        checkNull(input);
+        checkNullAndEmpty(input);
 
         String[] splitInput = input.split(" ");
         number1 = Double.parseDouble(splitInput[0]);
@@ -22,9 +20,9 @@ public class StringCalculator {
         return this.number1;
     }
 
-    public void checkNull(String input) {
+    public void checkNullAndEmpty(String input) {
         if (Objects.isNull(input) || input.trim().isEmpty()) {
-            throw new IllegalArgumentException("입력 값이 공백입니다.");
+            throw new IllegalArgumentException("empty or null String");
         }
     }
 

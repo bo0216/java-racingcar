@@ -1,10 +1,10 @@
 package calculator;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.NullSource;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -12,6 +12,11 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 public class StringCalculatorTest {
 
     private StringCalculator stringCalculator;
+
+    @BeforeEach
+    void setUp() {
+        stringCalculator = new StringCalculator();
+    }
 
     @ParameterizedTest
     @DisplayName("조건에 맞는 문자열 연산 테스트")
@@ -21,11 +26,11 @@ public class StringCalculatorTest {
     }
 
     @ParameterizedTest
-    @DisplayName("문자열이 공백일 때 테스트")
-    @NullSource
-    void checkNullTest(String input) {
-        assertThatThrownBy(() -> stringCalculator.checkNull(input))
+    @DisplayName("문자열이 공백이거나 null일 때 테스트")
+    @NullAndEmptySource
+    void checkNullAndEmptyTest(String input) {
+        assertThatThrownBy(() -> stringCalculator.checkNullAndEmpty(input))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("empty string");
+                .hasMessage("empty or null String");
     }
 }
