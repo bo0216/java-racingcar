@@ -19,9 +19,9 @@ public class RacingCars {
         return carsPositions;
     }
 
-    public void moveCars() {
+    public void moveCars(CarMoveBehavior carMoveBehavior) {
         for (int i = 0; i < carPositions.size(); i++) {
-            carPositions.get(i).move(new CarForwardBehavior());
+            carPositions.get(i).move(carMoveBehavior);
         }
     }
 

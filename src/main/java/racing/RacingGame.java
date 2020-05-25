@@ -8,7 +8,7 @@ public class RacingGame {
     }
 
     public RacingCars race() {
-        racingCars.moveCars();
+        racingCars.moveCars(new CarForwardBehavior());
         return racingCars;
     }
 }
