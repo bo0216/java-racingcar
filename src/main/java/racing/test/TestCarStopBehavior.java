@@ -1,4 +1,4 @@
-package racing.domain.test;
+package racing.test;
 
 import racing.domain.car.CarMoveBehavior;
 

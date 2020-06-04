@@ -4,8 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import racing.domain.car.RacingCars;
-import racing.domain.test.TestCarForwardBehavior;
-import racing.domain.test.TestCarStopBehavior;
+import racing.test.TestCarForwardBehavior;
+import racing.test.TestCarStopBehavior;
 
 import java.util.ArrayList;
 import java.util.List;
