@@ -7,6 +7,6 @@ public class TestCarForwardBehavior implements CarMoveBehavior {
 
     @Override
     public boolean action(){
-        return true;
+        return GO;
     }
 }
