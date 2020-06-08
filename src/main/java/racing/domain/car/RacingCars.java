@@ -1,10 +1,11 @@
 package racing.domain.car;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class RacingCars {
     private static final String DELIMITER = ",";
-
     private final List<Car> cars;
 
     public RacingCars(String inputName) {
