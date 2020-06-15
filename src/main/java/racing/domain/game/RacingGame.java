@@ -27,10 +27,6 @@ public class RacingGame {
         return racingCars.findMaxPosition();
     }
 
-    public List<String> findWinnerCars(int maxCarPosition) {
-        return racingCars.findWinnersCars(maxCarPosition);
-    }
-
     public RacingCars getRacingCars() {
         return racingCars;
     }
