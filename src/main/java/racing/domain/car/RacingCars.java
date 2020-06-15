@@ -51,7 +51,7 @@ public class RacingCars {
                 .orElseThrow(() -> new IllegalArgumentException());
     }
 
-    public List<String> findWinnersCars(List<Car> cars, int maxCarPosition) {
+    public List<String> findWinnersCars(int maxCarPosition) {
         return this.cars.stream()
                 .filter(list -> list.getPosition() == maxCarPosition)
                 .map(list -> list.getCarName())
