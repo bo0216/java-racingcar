@@ -19,8 +19,7 @@ public class RacingGameStart {
 
         RacingCars racingCars = new RacingCars(inputNames);
         RacingGame racingGame = new RacingGame(racingCars);
-        RacingGameResult racingGameResult = new RacingGameResult(racingCars, winnerList);
-
+        
         ResultView.resultMessage();
         ResultView.printResult(racingGame.race(times));
         ResultView.printWinner(racingGame);
